@@ -1,14 +1,14 @@
 export class Module {
     constructor(config) {
-
+        this.components = config.components;
     }
 
     start() {
         this.initComponents();
     }
 
-    initCOmponents() {
-
+    initComponents() {
+        this.components.forEach(c => c.render());
     }
 
 }
