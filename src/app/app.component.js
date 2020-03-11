@@ -11,9 +11,5 @@ export const appComponent = new AppComponent({
     template: `
     <app-header></app-header>
     <div class="row">
-    
-    <router-outlet></router-outlet>
-    
-    
-  `
+    <router-outlet></router-outlet>`
 });

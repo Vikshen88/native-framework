@@ -18,8 +18,14 @@ export class Module {
         this.components.forEach(this.renderComponent.bind(this));
     }
 
+   async renderComponent(c){
+        if(!wfm.isUndefined(c.onInit)) c.onInit();
+        c.render();
+        if(!wfm.isUndefined(c.afterInit)) c.afterInit();
+    }
+
     initRoutes(){
-        window.addEventListener('hashchange', this.renderRoute.bind(this))
+        window.addEventListener('hashchange', this.renderRoute.bind(this));
         this.renderRoute();
     }
 
@@ -36,7 +42,5 @@ export class Module {
 
     }
 
-    renderComponent(c){
-        c.render();
-    }
+
 }
