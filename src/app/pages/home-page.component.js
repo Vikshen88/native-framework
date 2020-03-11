@@ -1,4 +1,4 @@
-import {router, WFMComponent} from "../../framework";
+import {router, WFMComponent} from "framework";
 
 class HomePageComponent extends WFMComponent{
     constructor(config) {
@@ -16,13 +16,6 @@ class HomePageComponent extends WFMComponent{
         router.navigate('tabs');
     }
 
-    onInit() {
-        console.log('component init');
-    }
-
-    afterInit() {
-        console.log('component after init');
-    }
 }
 
 export const homePageComponent = new HomePageComponent({

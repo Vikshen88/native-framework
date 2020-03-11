@@ -13,6 +13,12 @@ module.exports = {
     devServer: {
         port: 4200
     },
+    resolve: {
+        alias: {
+            'framework': path.join(__dirname, 'src/framework')
+        }
+    },
+
     plugins: [
         new htmlWebPackPlugin({
             title: "Native Framework",
