@@ -1,6 +1,6 @@
 import {router} from "framework/core/routing/router";
 import {_} from "framework/tools/util";
-import {renderComponent} from "framework/core/component/render.component";
+import {renderComponent} from "framework/core/component/render-component";
 
 export class RoutingModule {
     constructor(routes) {
@@ -8,7 +8,7 @@ export class RoutingModule {
     }
 
     init(){
-        window.addEventListener('hashchange', renderRoute.bind(this));
+        window.addEventListener('hashchange ', renderRoute.bind(this));
         renderRoute.call(this);
     }
 }
